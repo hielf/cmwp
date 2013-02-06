@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347095960.513737:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%793e7370a207b156e9de7271e6579698I"logical_path;
+FI"level_up.gif;
+TI"pathname;
+FI")$root/app/assets/images/level_up.gif;
+FI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-09-08T17:18:55+08:00;
+FI"length;
+FI"
+16358;
+FI"digest;
+F"%8dea29321c4f38778a38d4f482b68272I"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c

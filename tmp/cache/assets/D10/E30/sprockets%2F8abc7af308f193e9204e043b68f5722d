@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347095968.999892:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%e82a76eb9b00c552e936139d95a446faI"logical_path;
+FI"level_remain.gif;
+TI"pathname;
+FI"-$root/app/assets/images/level_remain.gif;
+FI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-09-08T17:17:47+08:00;
+FI"length;
+FI"
+16713;
+FI"digest;
+F"%aead30901e54146ea3ffbe55c53d838aI"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c

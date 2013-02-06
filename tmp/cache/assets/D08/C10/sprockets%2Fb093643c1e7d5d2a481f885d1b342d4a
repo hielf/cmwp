@@ -1,0 +1,60 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354121316.46461:@value{	I"length:EFiÀI"digest;
+F"%fa7534314081ef523fedce50332b440dI"source;
+FI"À/* line 4, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles .calendar {
+  border-collapse: collapse;
+  width: 100%;
+}
+/* line 8, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles .calendar td, #articles .calendar th {
+  font-family: "Lucida Grande", arial, helvetica, sans-serif;
+  font-size: 10px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+/* line 15, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles .calendar th {
+  background: #DDD;
+  color: #666;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+/* line 22, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles .calendar td {
+  background: #FFF;
+  color: #777;
+  height: 80px;
+  vertical-align: top;
+  font-size: 16px;
+}
+/* line 30, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles .calendar .notmonth, #articles .calendar .notmonth a {
+  color: #CCC;
+}
+/* line 31, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles .calendar .today {
+  background-color: #D7F2FF;
+}
+
+/* line 34, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles #month {
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+/* line 39, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles #month a {
+  text-decoration: none;
+  padding: 0 10px;
+  color: #999;
+}
+
+/* line 46, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/articles.css.scss */
+#articles ul {
+  font-size: 11px;
+  padding-left: 20px;
+}
+;
+FI"_version;
+F"%183316c610e330120af1d5a23060b91c

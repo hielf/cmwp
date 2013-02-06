@@ -1,0 +1,24 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1346002006.3029919:@value{	I"length:EFiÏI"digest;
+F"%14e791ba24f54ace4a4a2fa4d97377bcI"source;
+FI"Ï(function() {
+
+  jQuery(function() {
+    return $('#categories_category_name').autocomplete({
+      source: $('#categories_category_name').data('autocomplete-source'),
+      focus: function(event, ui) {
+        $("#categories_category_name").val(ui.item.broker_code + "-" + ui.item.broker_name);
+        return false;
+      },
+      select: function(event, ui) {
+        $("#categories_category_name").val(ui.item.broker_code + "-" + ui.item.broker_name);
+        return false;
+      }
+    }).data("autocomplete")._renderItem = function(ul, item) {
+      return $("<li></li>").data("item.autocomplete", item).append("<a>" + item.broker_code + "-" + item.broker_name + "</a>").appendTo(ul);
+    };
+  });
+
+}).call(this);
+;
+FI"_version;
+F"%94e829e35d11f6d8c14e76d1d7ee8102

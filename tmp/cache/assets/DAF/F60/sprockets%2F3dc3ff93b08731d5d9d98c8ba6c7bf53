@@ -1,0 +1,36 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1346002005.771111:@value{	I"length:EFiYI"digest;
+F"%d4302d5481ece551d964ea23089e7385I"source;
+FI"Y/* line 4, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/pages.css.scss */
+ul.ui-autocomplete {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: solid 1px #999;
+  cursor: default;
+  -moz-box-shadow: 1px 1px 2px gray;
+  -webkit-box-shadow: 1px 1px 2px gray;
+  box-shadow: 1px 1px 2px gray;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+/* line 16, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/pages.css.scss */
+ul.ui-autocomplete li {
+  background-color: #FFF;
+  margin: 0;
+  padding: 0;
+}
+/* line 21, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/pages.css.scss */
+ul.ui-autocomplete li a {
+  color: #000;
+  display: block;
+  padding: 3px;
+  text-decoration: none;
+}
+/* line 27, /Users/hielf/workspace/projects/htbroker/app/assets/stylesheets/pages.css.scss */
+ul.ui-autocomplete li a.ui-state-hover, ul.ui-autocomplete li a.ui-state-active {
+  background-color: #FFFCB2;
+}
+;
+FI"_version;
+F"%9297b2626c3a71b7c8dcd2151fddf73b
