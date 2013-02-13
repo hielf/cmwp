@@ -1,20 +1,23 @@
 # source 'http://rubygems.org'
 source 'http://ruby.taobao.org/'
 
-gem 'rails', '3.1.3'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-
+# gem 'mysql2'
+gem 'activerecord-oracle_enhanced-adapter', '~> 1.4.1'
+gem 'ruby-oci8', '~> 2.1.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails',   '~> 3.2.6'
+  gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
+  gem "therubyracer"
+  gem "less-rails"
   gem 'twitter-bootstrap-rails'
 end
 
@@ -56,6 +59,7 @@ group :development do
   # gem 'annotate', '2.4.0'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'faker', '1.0.1'
+  gem 'better_errors'
 end
 
 group :test do

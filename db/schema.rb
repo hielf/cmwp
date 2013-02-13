@@ -13,138 +13,110 @@
 
 ActiveRecord::Schema.define(:version => 20120827173358) do
 
+  create_table "KSTAR.test_broker", :id => false, :force => true do |t|
+    t.integer "branch_no",         :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "broker_account",    :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "broker_kind",       :limit => 2,                                 :null => false
+    t.integer "relative_account",  :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "relative_operator", :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "broker_status",     :limit => 2,                                 :null => false
+    t.integer "nationality",       :limit => 2,                                 :null => false
+    t.integer "id_kind",           :limit => 2,                                 :null => false
+    t.integer "id_no",             :limit => 2,                                 :null => false
+    t.integer "broker_name",       :limit => 2,                                 :null => false
+    t.integer "entrust_way",       :limit => 2,                                 :null => false
+    t.integer "broker_rights",     :limit => 2,                                 :null => false
+    t.integer "password",          :limit => 2,                                 :null => false
+    t.integer "broker_roles",      :limit => 2,                                 :null => false
+    t.integer "authorize_roles",   :limit => 2,                                 :null => false
+    t.integer "authorize_handon",  :limit => 2,                                 :null => false
+    t.integer "imename",           :limit => 2,                                 :null => false
+    t.integer "client_input",      :limit => 2,                                 :null => false
+    t.integer "restrict_times",    :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "login_times",       :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "next_date",         :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "draw_kind",         :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.decimal "up_ratio",                        :precision => 9,  :scale => 8, :null => false
+    t.integer "broker_level1",     :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "broker_level2",     :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "broker_level3",     :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "broker_level4",     :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "up_broker",         :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "root_flag",         :limit => 2,                                 :null => false
+    t.integer "reserve",           :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "valid_date",        :limit => 10, :precision => 10, :scale => 0
+    t.integer "last_date",         :limit => 10, :precision => 10, :scale => 0
+    t.integer "draw_mode",         :limit => 2
+    t.integer "enter_mode",        :limit => 2
+    t.integer "draw_tax",          :limit => 2
+  end
+
+  create_table "KSTAR.test_brokerclient", :id => false, :force => true do |t|
+    t.integer "branch_no",       :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "fund_account",    :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "broker_account",  :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "broker_kind",     :limit => 2,                                 :null => false
+    t.integer "draw_type",       :limit => 2,                                 :null => false
+    t.integer "draw_kind",       :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "benefit_account", :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.decimal "back_ratio",                    :precision => 9,  :scale => 8, :null => false
+    t.integer "account_type",    :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "open_date",       :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "valid_date",      :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "draw_mode",       :limit => 2,                                 :null => false
+    t.integer "enter_mode",      :limit => 2,                                 :null => false
+    t.integer "broker_status",   :limit => 2,                                 :null => false
+    t.integer "broker_rights",   :limit => 2,                                 :null => false
+    t.integer "last_date",       :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.decimal "sum_fare",                      :precision => 19, :scale => 2, :null => false
+    t.integer "draw_tax",        :limit => 2,                                 :null => false
+    t.decimal "client_integral",               :precision => 19, :scale => 2, :null => false
+    t.decimal "today_integral",                :precision => 19, :scale => 2, :null => false
+    t.integer "last_date1",      :limit => 10, :precision => 10, :scale => 0
+    t.integer "last_date2",      :limit => 10, :precision => 10, :scale => 0
+  end
+
+  create_table "KSTAR.test_operators", :id => false, :force => true do |t|
+    t.integer "op_branch_no",     :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "operator_no",      :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "operator_kind",    :limit => 2,                                 :null => false
+    t.integer "operator_name",    :limit => 2,                                 :null => false
+    t.integer "registe_date",     :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "cancel_date",      :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "status",           :limit => 2,                                 :null => false
+    t.integer "password",         :limit => 2,                                 :null => false
+    t.integer "authorize_handon", :limit => 2,                                 :null => false
+    t.integer "imename",          :limit => 2,                                 :null => false
+    t.integer "client_input",     :limit => 2,                                 :null => false
+    t.integer "restrict_times",   :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "login_times",      :limit => 5,  :precision => 5,  :scale => 0, :null => false
+    t.integer "reserve",          :limit => 10, :precision => 10, :scale => 0, :null => false
+    t.integer "operator_rights",  :limit => 2,                                 :null => false
+    t.integer "dynpassword",      :limit => 2
+  end
+
   create_table "branches", :force => true do |t|
     t.string   "code"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "department_id"
+    t.integer  "department_id", :precision => 38, :scale => 0
     t.string   "supervisor"
     t.string   "location"
     t.string   "phone"
   end
 
-  add_index "branches", ["department_id"], :name => "index_branches_on_department_id"
+  add_index "branches", ["department_id"], :name => "i_branches_department_id"
 
   create_table "branchindices", :force => true do |t|
-    t.integer  "branch_id"
+    t.integer  "branch_id",  :precision => 38, :scale => 0
     t.string   "month_id"
-    t.integer  "indextype"
-    t.float    "occursum",   :limit => 19
+    t.integer  "indextype",  :precision => 38, :scale => 0
+    t.decimal  "occursum"
     t.string   "remark"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "branchindices", ["branch_id", "month_id", "indextype"], :name => "index_branchindices_on_branch_id_and_month_id_and_indextype", :unique => true
+  add_index "branchindices", ["branch_id", "month_id", "indextype"], :name => "i_bra_bra_id_mon_id_ind", :unique => true
 
-  create_table "brokerindices", :force => true do |t|
-    t.integer  "broker_id"
-    t.string   "month_id"
-    t.integer  "indextype"
-    t.float    "occursum",   :limit => 19
-    t.string   "remark"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "brokerindices", ["broker_id", "month_id", "indextype"], :name => "index_brokerindices_on_broker_id_and_month_id_and_indextype", :unique => true
-
-  create_table "brokerrels", :force => true do |t|
-    t.integer  "broker_id"
-    t.integer  "rel_broker_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "brokerrels", ["broker_id"], :name => "index_brokerrels_on_broker_id"
-
-  create_table "brokers", :force => true do |t|
-    t.string   "broker_code"
-    t.string   "broker_name"
-    t.integer  "branch_id"
-    t.string   "broker_type"
-    t.string   "gender"
-    t.integer  "age"
-    t.string   "broker_level"
-    t.string   "broker_status"
-    t.string   "jobstatus"
-    t.string   "employee_code"
-    t.string   "open_date"
-    t.string   "close_date"
-    t.string   "certificate_type"
-    t.string   "certificate_num"
-    t.string   "certificate_addr"
-    t.string   "mobile"
-    t.string   "phone"
-    t.string   "fax"
-    t.string   "email"
-    t.string   "birthday"
-    t.string   "bank_account"
-    t.string   "graduate_college"
-    t.string   "graduate_date"
-    t.string   "major"
-    t.string   "earliest_date"
-    t.string   "agreement_begin_date"
-    t.string   "agreement_end_date"
-    t.string   "compact_no"
-    t.string   "broker_qualify_no"
-    t.string   "cert_first_date"
-    t.string   "cert_valite_date"
-    t.string   "cert_get_date"
-    t.string   "exam_pass_date"
-    t.float    "risk_balance"
-    t.string   "broker_degree"
-    t.string   "post"
-    t.string   "job_qualify"
-    t.string   "passed_exam"
-    t.string   "broker_qualify"
-    t.string   "zqbz"
-    t.string   "personnel_manning"
-    t.string   "region_manager"
-    t.string   "team_name"
-    t.text     "remark"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "avatar"
-  end
-
-  add_index "brokers", ["branch_id"], :name => "index_brokers_on_branch_id"
-  add_index "brokers", ["broker_code"], :name => "index_brokers_on_broker_code", :unique => true
-  add_index "brokers", ["broker_name"], :name => "index_brokers_on_broker_name"
-
-  create_table "departments", :force => true do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "supervisor"
-    t.string   "location"
-    t.string   "phone"
-  end
-
-  create_table "deptindices", :force => true do |t|
-    t.integer  "department_id"
-    t.string   "month_id"
-    t.integer  "indextype"
-    t.float    "occursum",      :limit => 19
-    t.string   "remark"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "deptindices", ["department_id", "month_id", "indextype"], :name => "index_deptindices_on_department_id_and_month_id_and_indextype", :unique => true
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "encrypted_password"
-    t.string   "salt"
-    t.boolean  "admin",              :default => false
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-
-end

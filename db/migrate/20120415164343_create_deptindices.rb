@@ -4,7 +4,7 @@ class CreateDeptindices < ActiveRecord::Migration
       t.integer :department_id
       t.string :month_id
       t.integer :indextype
-      t.double :occursum
+      t.float :occursum
       t.string :remark
 
       t.timestamps

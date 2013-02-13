@@ -1,4 +1,4 @@
-Htbroker::Application.routes.draw do
+Cmwp::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   resources :departments, :only => [:index, :show] do

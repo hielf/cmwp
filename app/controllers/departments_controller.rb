@@ -3,13 +3,13 @@ class DepartmentsController < ApplicationController
   before_filter :authenticate, :only => [:index, :show]
   def index
     @departments = Department.all
-    @department  = Department.find_by_code(0000)
+    @department  = Department.find_by_code("0000")
     @title       = "选择分公司"
     @timeperiod  = time_period(time)
     @department_num = @departments.count.to_i-1
     @branches    = Branch.all
     @branch_num  = @branches.count.to_i
-    @direct_branch_num = Department.find_by_code(0000).branches.count.to_i
+    @direct_branch_num = Department.find_by_code("0000").branches.count.to_i
     
     if @department.deptindices.order("month_id DESC").find_by_indextype(1005).nil?
       @broker_a_num = 0  
