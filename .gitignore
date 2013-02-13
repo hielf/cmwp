@@ -11,8 +11,7 @@
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp/*
+/tmp
 
 Gemfile.lock
 doc/api
@@ -22,3 +21,5 @@ doc/app
 .DS_Store
 *.log
 /webrat.log
+
+*.log

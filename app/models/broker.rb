@@ -6,7 +6,7 @@ class Broker < ActiveRecord::Base
                         :foreign_key => "rel_broker_id"
   has_many :relbrokers, :through => :brokerrels, :source => :broker
   
-  # default_scope :order => 'brokers.broker_code'
+  default_scope :order => 'brokers.broker_code'
   
   scope :typebrokers, lambda { |brokertype| where("broker_type = ?", brokertype) } 
   

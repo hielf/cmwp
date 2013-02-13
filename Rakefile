@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Htbroker::Application.load_tasks
+Cmwp::Application.load_tasks
