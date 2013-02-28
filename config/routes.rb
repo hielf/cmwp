@@ -6,7 +6,6 @@ Cmwp::Application.routes.draw do
       get 'dept_index', :on => :member
     end
   end
-  # resources :departments, :only => [:index, :show] 
   resources :branches, :only => [:index, :show] do
     get 'typebrokers', :on => :member
     resources :branchindices do
