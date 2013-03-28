@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     # raise request.inspect
     @user  = User.find(params[:id])
     @title = "用户设置"
-    
+    @userpositions = Userposition.all
   end
   
   def update

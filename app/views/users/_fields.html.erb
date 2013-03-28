@@ -2,3 +2,5 @@
 <%= f.input :email, :label => 'Email', :required => false %>
 <%= f.input :password, :label => '密码', :class => "help-inline", :required => false %>
 <%= f.input :password_confirmation, :label => '确认' %>
+<%= f.input :userpositions, :collection => @userpositions, 
+ 					  :label => '岗位', :input_html => { :multiple => true }%>
