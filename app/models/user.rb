@@ -14,7 +14,7 @@
 
 class User < ActiveRecord::Base
   attr_accessor   :password
-  attr_accessible :name, :email, :password, :password_confirmation, :userposition_ids
+  attr_accessible :name, :email, :password, :usercode, :password_confirmation, :userposition_ids
   
   has_many :userpositionrels, :dependent => :destroy, 
                               :foreign_key => "userid"
@@ -25,9 +25,9 @@ class User < ActiveRecord::Base
   
   validates :name,  :presence   => true,
                     :length     => { :maximum => 20 }
-  validates :email, :presence   => true,
-                    :format     => { :with => email_regex  },
-                    :uniqueness => { :case_sensitive => false }
+  # validates :email, :presence   => true,
+  #                   :format     => { :with => email_regex  },
+  #                   :uniqueness => { :case_sensitive => false }
   validates :password, :presence     => true,
                        :confirmation => true,
                        :length       => { :within => 5..20 }
@@ -43,8 +43,8 @@ class User < ActiveRecord::Base
   end
   
   class << self
-    def authenticate(email, submmited_password)
-      user = User.find_by_email(email)
+    def authenticate(usercode, submmited_password)
+      user = User.find_by_usercode(usercode)
       (user && user.has_password?(submmited_password)) ? user : nil
       # 与上面相同
       # return nil  if user.nil?
