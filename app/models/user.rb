@@ -14,7 +14,7 @@
 
 class User < ActiveRecord::Base
   attr_accessor   :password
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :userposition_ids
   
   has_many :userpositionrels, :dependent => :destroy, 
                               :foreign_key => "userid"
@@ -36,6 +36,10 @@ class User < ActiveRecord::Base
   
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
+  end
+  
+  def position!(position)
+    userpositionrels.create!(:positionid => position.id )
   end
   
   class << self
